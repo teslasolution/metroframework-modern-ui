@@ -42,7 +42,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroWaterMarkWeight
@@ -50,7 +51,8 @@ namespace MetroFramework
         Light,
         Regular,
         Bold,
-        Italic
+        Italic,
+        Nastaleeq
     }
 
     public enum MetroTileTextSize
@@ -64,7 +66,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroLinkSize
@@ -78,7 +81,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroComboBoxSize
@@ -92,7 +96,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroDateTimeSize
@@ -106,7 +111,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroTextBoxSize
@@ -120,7 +126,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroProgressBarSize
@@ -134,7 +141,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroTabControlSize
@@ -148,7 +156,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroCheckBoxSize
@@ -162,7 +171,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public enum MetroButtonSize
@@ -176,7 +186,8 @@ namespace MetroFramework
     {
         Light,
         Regular,
-        Bold
+        Bold,
+        Nastaleeq
     }
 
     public static class MetroFonts
@@ -244,6 +255,12 @@ namespace MetroFramework
             return FontResolver.ResolveFont("Segoe UI", size, FontStyle.Italic, GraphicsUnit.Pixel);
         }
 
+        public static Font Nastaleeq(float size)
+        {
+            return FontResolver.ResolveFont("Jameel Noori Nastaleeq", size, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+
         public static Font Title
         {
             get { return DefaultLight(24f); }
@@ -264,6 +281,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (labelWeight == MetroTileTextWeight.Bold)
                     return DefaultBold(12f);
+                if (labelWeight == MetroTileTextWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (labelSize == MetroTileTextSize.Medium)
             {
@@ -273,6 +292,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (labelWeight == MetroTileTextWeight.Bold)
                     return DefaultBold(14f);
+                if (labelWeight == MetroTileTextWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (labelSize == MetroTileTextSize.Tall)
             {
@@ -282,6 +303,8 @@ namespace MetroFramework
                     return Default(18f);
                 if (labelWeight == MetroTileTextWeight.Bold)
                     return DefaultBold(18f);
+                if (labelWeight == MetroTileTextWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return DefaultLight(14f);
@@ -302,6 +325,9 @@ namespace MetroFramework
                     return Default(12f);
                 if (linkWeight == MetroLinkWeight.Bold)
                     return DefaultBold(12f);
+                if (linkWeight == MetroLinkWeight.Nastaleeq)
+                    return Nastaleeq(18f);
+
             }
             else if (linkSize == MetroLinkSize.Medium)
             {
@@ -311,6 +337,9 @@ namespace MetroFramework
                     return Default(14f);
                 if (linkWeight == MetroLinkWeight.Bold)
                     return DefaultBold(14f);
+                if (linkWeight == MetroLinkWeight.Nastaleeq)
+                    return Nastaleeq(22f);
+
             }
             else if (linkSize == MetroLinkSize.Tall)
             {
@@ -320,6 +349,9 @@ namespace MetroFramework
                     return Default(18f);
                 if (linkWeight == MetroLinkWeight.Bold)
                     return DefaultBold(18f);
+                if (linkWeight == MetroLinkWeight.Nastaleeq)
+                    return Nastaleeq(26f);
+
             }
 
             return Default(12f);
@@ -335,6 +367,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (linkWeight == MetroComboBoxWeight.Bold)
                     return DefaultBold(12f);
+                if (linkWeight == MetroComboBoxWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (linkSize == MetroComboBoxSize.Medium)
             {
@@ -344,6 +378,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (linkWeight == MetroComboBoxWeight.Bold)
                     return DefaultBold(14f);
+                if (linkWeight == MetroComboBoxWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (linkSize == MetroComboBoxSize.Tall)
             {
@@ -353,6 +389,8 @@ namespace MetroFramework
                     return Default(18f);
                 if (linkWeight == MetroComboBoxWeight.Bold)
                     return DefaultBold(18f);
+                if (linkWeight == MetroComboBoxWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return Default(12f);
@@ -368,6 +406,9 @@ namespace MetroFramework
                     return Default(12f);
                 if (linkWeight == MetroDateTimeWeight.Bold)
                     return DefaultBold(12f);
+                if (linkWeight == MetroDateTimeWeight.Nastaleeq)
+                    return Nastaleeq(18f);
+
             }
             else if (linkSize == MetroDateTimeSize.Medium)
             {
@@ -377,6 +418,9 @@ namespace MetroFramework
                     return Default(14f);
                 if (linkWeight == MetroDateTimeWeight.Bold)
                     return DefaultBold(14f);
+                if (linkWeight == MetroDateTimeWeight.Nastaleeq)
+                    return Nastaleeq(22f);
+
             }
             else if (linkSize == MetroDateTimeSize.Tall)
             {
@@ -386,6 +430,9 @@ namespace MetroFramework
                     return Default(18f);
                 if (linkWeight == MetroDateTimeWeight.Bold)
                     return DefaultBold(18f);
+                if (linkWeight == MetroDateTimeWeight.Nastaleeq)
+                    return Nastaleeq(26f);
+
             }
 
             return Default(12f);
@@ -401,6 +448,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (labelWeight == MetroLabelWeight.Bold)
                     return DefaultBold(12f);
+                if (labelWeight == MetroLabelWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (labelSize == MetroLabelSize.Medium)
             {
@@ -410,6 +459,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (labelWeight == MetroLabelWeight.Bold)
                     return DefaultBold(14f);
+                if (labelWeight == MetroLabelWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (labelSize == MetroLabelSize.Tall)
             {
@@ -419,6 +470,8 @@ namespace MetroFramework
                     return Default(18f);
                 if (labelWeight == MetroLabelWeight.Bold)
                     return DefaultBold(18f);
+                if (labelWeight == MetroLabelWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return DefaultLight(14f);
@@ -434,6 +487,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (linkWeight == MetroTextBoxWeight.Bold)
                     return DefaultBold(12f);
+                if (linkWeight == MetroTextBoxWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (linkSize == MetroTextBoxSize.Medium)
             {
@@ -443,6 +498,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (linkWeight == MetroTextBoxWeight.Bold)
                     return DefaultBold(14f);
+                if (linkWeight == MetroTextBoxWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (linkSize == MetroTextBoxSize.Tall)
             {
@@ -452,6 +509,8 @@ namespace MetroFramework
                     return Default(18f);
                 if (linkWeight == MetroTextBoxWeight.Bold)
                     return DefaultBold(18f);
+                if (linkWeight == MetroTextBoxWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return Default(12f);
@@ -467,6 +526,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (labelWeight == MetroProgressBarWeight.Bold)
                     return DefaultBold(12f);
+                if (labelWeight == MetroProgressBarWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (labelSize == MetroProgressBarSize.Medium)
             {
@@ -476,6 +537,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (labelWeight == MetroProgressBarWeight.Bold)
                     return DefaultBold(14f);
+                if (labelWeight == MetroProgressBarWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (labelSize == MetroProgressBarSize.Tall)
             {
@@ -485,6 +548,8 @@ namespace MetroFramework
                     return Default(18f);
                 if (labelWeight == MetroProgressBarWeight.Bold)
                     return DefaultBold(18f);
+                if (labelWeight == MetroProgressBarWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return DefaultLight(14f);
@@ -500,6 +565,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (labelWeight == MetroTabControlWeight.Bold)
                     return DefaultBold(12f);
+                if (labelWeight == MetroTabControlWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (labelSize == MetroTabControlSize.Medium)
             {
@@ -509,6 +576,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (labelWeight == MetroTabControlWeight.Bold)
                     return DefaultBold(14f);
+                if (labelWeight == MetroTabControlWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (labelSize == MetroTabControlSize.Tall)
             {
@@ -518,6 +587,8 @@ namespace MetroFramework
                     return Default(18f);
                 if (labelWeight == MetroTabControlWeight.Bold)
                     return DefaultBold(18f);
+                if (labelWeight == MetroTabControlWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return DefaultLight(14f);
@@ -533,6 +604,8 @@ namespace MetroFramework
                     return Default(12f);
                 if (linkWeight == MetroCheckBoxWeight.Bold)
                     return DefaultBold(12f);
+                if (linkWeight == MetroCheckBoxWeight.Nastaleeq)
+                    return Nastaleeq(18f);
             }
             else if (linkSize == MetroCheckBoxSize.Medium)
             {
@@ -542,6 +615,8 @@ namespace MetroFramework
                     return Default(14f);
                 if (linkWeight == MetroCheckBoxWeight.Bold)
                     return DefaultBold(14f);
+                if (linkWeight == MetroCheckBoxWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (linkSize == MetroCheckBoxSize.Tall)
             {
@@ -551,6 +626,9 @@ namespace MetroFramework
                     return Default(18f);
                 if (linkWeight == MetroCheckBoxWeight.Bold)
                     return DefaultBold(18f);
+                if (linkWeight == MetroCheckBoxWeight.Nastaleeq)
+                    return Nastaleeq(26f);
+
             }
 
             return Default(12f);
@@ -568,6 +646,9 @@ namespace MetroFramework
                     return DefaultBold(12f);
                 if (labelWeight == MetroWaterMarkWeight.Italic)
                     return DefaultItalic(12f);
+                if (labelWeight == MetroWaterMarkWeight.Nastaleeq)
+                    return Nastaleeq(18f);
+
             }
             else if (labelSize == MetroLabelSize.Medium)
             {
@@ -579,6 +660,9 @@ namespace MetroFramework
                     return DefaultBold(14f);
                 if (labelWeight == MetroWaterMarkWeight.Italic)
                     return DefaultItalic(14f);
+                if (labelWeight == MetroWaterMarkWeight.Nastaleeq)
+                    return Nastaleeq(22f);
+
             }
             else if (labelSize == MetroLabelSize.Tall)
             {
@@ -590,6 +674,9 @@ namespace MetroFramework
                     return DefaultBold(18f);
                 if (labelWeight == MetroWaterMarkWeight.Italic)
                     return DefaultItalic(18f);
+                if (labelWeight == MetroWaterMarkWeight.Nastaleeq)
+                    return Nastaleeq(26f);
+
             }
 
             return DefaultLight(14f);
@@ -605,6 +692,8 @@ namespace MetroFramework
                     return Default(11f);
                 if (linkWeight == MetroButtonWeight.Bold)
                     return DefaultBold(11f);
+                if (linkWeight == MetroButtonWeight.Nastaleeq )
+                    return Nastaleeq(18f);
             }
             else if (linkSize == MetroButtonSize.Medium)
             {
@@ -614,6 +703,8 @@ namespace MetroFramework
                     return Default(13f);
                 if (linkWeight == MetroButtonWeight.Bold)
                     return DefaultBold(13f);
+                if (linkWeight == MetroButtonWeight.Nastaleeq)
+                    return Nastaleeq(22f);
             }
             else if (linkSize == MetroButtonSize.Tall)
             {
@@ -623,6 +714,8 @@ namespace MetroFramework
                     return Default(16f);
                 if (linkWeight == MetroButtonWeight.Bold)
                     return DefaultBold(16f);
+                if (linkWeight == MetroButtonWeight.Nastaleeq)
+                    return Nastaleeq(26f);
             }
 
             return Default(11f);

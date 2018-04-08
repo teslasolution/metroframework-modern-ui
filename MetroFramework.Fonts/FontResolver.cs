@@ -27,6 +27,8 @@ namespace MetroFramework.Fonts
         private const string OPEN_SANS_REGULAR = "Open Sans";
         private const string OPEN_SANS_LIGHT = "Open Sans Light";
         private const string OPEN_SANS_BOLD = "Open Sans Bold";
+        private const string OPEN_NASTALEEQ = "Jameel Noori Nastaleeq";
+        
 
         private readonly PrivateFontCollection fontCollection = new PrivateFontCollection();
 
@@ -48,6 +50,11 @@ namespace MetroFramework.Fonts
                 }
 
                 familyName = OPEN_SANS_REGULAR;
+                return true;
+            }
+            if (familyName == "Jameel Noori Nastaleeq")
+            {
+                familyName = OPEN_NASTALEEQ;
                 return true;
             }
 
